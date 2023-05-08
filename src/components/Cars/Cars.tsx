@@ -9,7 +9,7 @@ const Cars = () => {
 
     const [cars, setCars] = useState<ICar[]>();
     const [showCars, setShowCars] = useState<boolean>(true)
-    const [carForUpdate, setCarForUpdate] = useState<any>();
+    const [carForUpdate, setCarForUpdate] = useState<ICar|null>(null);
 
 
 
@@ -19,7 +19,7 @@ const Cars = () => {
 
     return (
         <div>
-            <Form setShowCars={setShowCars} carForUpdate={carForUpdate}/>
+            <Form setShowCars={setShowCars} carForUpdate={carForUpdate} setCarForUpdate={setCarForUpdate}/>
             <hr/>
             {cars?.map(car => <Car car={car} key={car.id} setCarForUpdate={setCarForUpdate} setShowCars={setShowCars}/>)}
         </div>
