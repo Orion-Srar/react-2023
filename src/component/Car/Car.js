@@ -1,14 +1,13 @@
 import {useDispatch} from "react-redux";
-import {carActions} from "../../reduser";
-import {carService} from "../../service";
+
+import {carActions} from "../../redux";
 
 const Car = ({car}) => {
     const {id, brand, price, year} = car;
     const dispatch = useDispatch();
 
-    const deleteCar = async (id) => {
-      await carService.delete(id)
-        dispatch(carActions.changeTrigger())
+    const deleteCar = async () => {
+        await dispatch(carActions.deleteCar({id}))
     }
 
     return (

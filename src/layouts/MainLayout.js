@@ -1,11 +1,11 @@
-import {Header} from "../component";
-import {Outlet} from "react-router-dom";
+import {CarPage} from "../pages/CarPage";
 
 const MainLayout = () => {
     return (
         <div>
-            <Header/>
-            <Outlet/>
+            {/*<Header/>*/}
+            {/*<Outlet/>*/}
+            <CarPage/>
         </div>
     );
 };
