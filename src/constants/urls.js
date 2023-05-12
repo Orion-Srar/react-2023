@@ -1,11 +1,8 @@
-const placeholderAPI = 'http://jsonplaceholder.typicode.com';
-const carAPI = 'http://owu.linkpc.net/carsAPI/v1';
+const baseURL = 'http://owu.linkpc.net/carsAPI/v2';
 
 const cars = '/cars';
 
 const urls = {
-    users: '/users',
-    comments: '/comments',
     cars: {
         cars,
         byId: (id) => `${cars}/${id}`
@@ -13,7 +10,6 @@ const urls = {
 }
 
 export {
-    placeholderAPI,
-    carAPI,
+    baseURL,
     urls
 }
